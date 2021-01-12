@@ -1,0 +1,11 @@
+{
+  "name": "piec",
+  "version": "1.0.0",
+  "description": "For show temperature in fireplace using Webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PW",
+  "license": "ISC"
+}

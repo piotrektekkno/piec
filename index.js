@@ -1,12 +1,15 @@
-const http = require('http');
-const port = process.env.PORT || 8081
+const express = require("express");
+const path = require("path");
+const app = express();
 
-const requestListener = function (req, res) {
-  let dt = new Date;
-  res.writeHead(200);
-  res.end('Hello, World! ' + process.env.PORT + ' ' + dt.getUTCDate() );
 
-}
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
 
-const server = http.createServer(requestListener);
-server.listen(port);
+app.get("/", (req, res) => {
+    res.render("index"); // index refers to index.ejs
+});
+
+app.listen(3000, () => {
+  console.log("server started on port 3000");
+});

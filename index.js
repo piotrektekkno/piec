@@ -1,8 +1,13 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const bodyParser = require('body-parser')
 
 let tempArray = new Array();
+
+
+app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); // to support URL-encoded bodies
 
 
 app.set("view engine", "ejs");

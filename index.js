@@ -18,7 +18,7 @@ app.get("/temp", (req, res) => {
 });
 
 app.post("/postTemp", (req, res) => {
-  console.log('TEMP' + req);
+  console.log('TEMP POST' + req);
   res.send('200:OK');
 });
 

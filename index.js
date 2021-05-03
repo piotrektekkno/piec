@@ -12,13 +12,9 @@ app.get("/", (req, res) => {
     res.render("index"); // index refers to index.ejs
 });
 
-app.get("/temp", (req, res) => {
-  console.log('TEMP' + req);
-  res.send('200:OK');
-});
 
 app.post("/postTemp", (req, res) => {
-  console.log('TEMP POST' + req);
+  console.log('TEMP POST' + req.body.dtm);
   res.send('200:OK');
 });
 

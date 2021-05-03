@@ -20,6 +20,8 @@ app.get("/", (req, res) => {
 
 app.post("/postTemp", (req, res) => {
   console.log('TEMP POST' + req.body.dtm);
+  console.log('TEMP POST' + req.body.sensor0);
+  console.log('TEMP POST' + req.body.sensor1);
   res.send('200:OK');
 });
 

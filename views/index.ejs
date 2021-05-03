@@ -14,11 +14,11 @@
         <th>Temperatura Pieca</th>
         <th>Temperatura Otoczenia</th>
       <tr>
-        <%for(var a =0; a < 10; a++){ %>
+        <%for(var a = 0; a < tArray.length; a++){ %>
           <tr>
-            <td><%=a%></td>
-            <td><%=a%></td>
-            <td><%=a%></td>
+            <td><%= tArray[a].dtm %></td>
+            <td><%= tArray[a].sensor0 %></td>
+            <td><%= tArray[a].densor1 %></td>
           </tr>
         <%} %>
     </table>

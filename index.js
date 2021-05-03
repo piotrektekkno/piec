@@ -14,11 +14,12 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-    res.render("index"); // index refers to index.ejs
+    res.render("index", tempArray ); // index refers to index.ejs
 });
 
 
 app.post("/postTemp", (req, res) => {
+  tempArray.push(req.body);
   console.log('TEMP POST' + req.body.dtm);
   console.log('TEMP POST' + req.body.sensor0);
   console.log('TEMP POST' + req.body.sensor1);

@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
 
 app.get("/temp", (req, res) => {
   console.log('TEMP' + req);
+  res.send('200:OK');
 });
 
 app.listen(process.env.PORT || 3000, () => {

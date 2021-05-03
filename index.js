@@ -17,6 +17,11 @@ app.get("/temp", (req, res) => {
   res.send('200:OK');
 });
 
+app.post("/postTemp", (req, res) => {
+  console.log('TEMP' + req);
+  res.send('200:OK');
+});
+
 app.listen(process.env.PORT || 3000, () => {
   console.log("server started on port " +  3000 || process.env.PORT );
 });

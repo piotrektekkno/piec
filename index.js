@@ -2,12 +2,18 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+let tempArray = new Array();
+
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
     res.render("index"); // index refers to index.ejs
+});
+
+app.get("/temp", (req, res) => {
+  console.log('TEMP' + req);
 });
 
 app.listen(process.env.PORT || 3000, () => {

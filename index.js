@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 
 
 app.post("/postTemp", (req, res) => {
+  req.body.dtm = new Date();
   tempArray.push(req.body);
   console.log('TEMP POST' + req.body.dtm);
   console.log('TEMP POST' + req.body.sensor0);

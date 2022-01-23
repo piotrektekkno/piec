@@ -15,7 +15,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-    res.render("index", {tArray: tempArray.reverse()} ); // index refers to index.ejs
+    res.render("index", {tArray: tempArray} ); // index refers to index.ejs
 });
 
 

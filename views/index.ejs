@@ -14,10 +14,7 @@
         <th>Temperatura Pieca</th>
         <th>Temperatura Otoczenia</th>
       <tr>
-        <%
-          tArray.reverse();
-          for(var a = 0; a < tArray.length; a++){ 
-        %>
+        <%for(var a = tArray.length - 1; a > 0; a--){ %>
           <tr>
             <td><%= tArray[a].dtm %></td>
             <td><%= tArray[a].sensor0 %></td>

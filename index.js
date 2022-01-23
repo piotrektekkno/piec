@@ -1,7 +1,8 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { tmpdir } = require("os");
 
 let tempArray = new Array();
 
@@ -21,6 +22,8 @@ app.get("/", (req, res) => {
 app.post("/postTemp", (req, res) => {
   req.body.dtm = new Date();
   tempArray.push(req.body);
+  if(tempArray.length > 19)
+    tempArray.splice(0,19);
   console.log('TEMP POST' + req.body.dtm);
   console.log('TEMP POST' + req.body.sensor0);
   console.log('TEMP POST' + req.body.sensor1);

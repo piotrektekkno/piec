@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
 app.post("/postTemp", (req, res) => {
   let tm = new Date();
   tm = tm.toLocaleDateString('pl-PL') + ' ' + tm.toLocaleTimeString('pl-PL');
+  
   req.body.dtm = tm;
   tempArray.push(req.body);
   if(tempArray.length > 19)

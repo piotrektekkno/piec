@@ -26,7 +26,7 @@ app.post("/postTemp", (req, res) => {
   req.body.dtm = tm;
   tempArray.push(req.body);
   if(tempArray.length > 19)
-    tempArray.splice(0,19);
+    tempArray.splice(0,1);
   console.log('TEMP POST' + req.body.dtm);
   console.log('TEMP POST' + req.body.sensor0);
   console.log('TEMP POST' + req.body.sensor1);
